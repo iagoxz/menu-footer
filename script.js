@@ -1,28 +1,36 @@
-/*const inputs = document.querySelectorAll('.input');
-const button = document.querySelector('.login__button');
+const slider = document.querySelectorAll('.slider');
+const btnPrev = document.getElementById('prev-button');
+const btnNext = document.getElementById('next-button'); 
 
-const handleFocus = ({ target }) => {
-  const span = target.previousElementSibling;
-  span.classList.add('span-active');
+let currentSlide = 0;
+
+function hideSlider() {
+  slider.forEach(item => item.classList.remove('on'))
 }
 
-const handleFocusOut = ({ target }) => {
-  if (target.value === '') {
-    const span = target.previousElementSibling;
-    span.classList.remove('span-active');
-  }
+function showSlider() {
+  slider[currentSlide].classList.add('on')
 }
 
-const handleChange = () => {
-  const [username, password] = inputs;
-
-  if (username.value && password.value.length >= 8) {
-    button.removeAttribute('disabled');
+function nextSlider() {
+  hideSlider()
+  if(currentSlide === slider.length -1) {
+    currentSlide = 0
   } else {
-    button.setAttribute('disabled', '');
+    currentSlide++
   }
+  showSlider()
 }
 
-inputs.forEach((input) => input.addEventListener('focus', handleFocus));
-inputs.forEach((input) => input.addEventListener('focusout', handleFocusOut));
-inputs.forEach((input) => input.addEventListener('input', handleChange));*/
+function prevSlider() {
+  hideSlider()
+  if(currentSlide === 0) {
+    currentSlide = slider.length -1
+  } else {
+    currentSlide--
+  }
+  showSlider()
+}
+
+btnNext.addEventListener('click', nextSlider)
+btnPrev.addEventListener('click', prevSlider)
