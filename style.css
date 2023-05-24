@@ -7,23 +7,69 @@
     box-sizing: border-box;
 }
 
-boddy{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    
+body{
+  background-color: #fffaf7;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+
+}
+
+section .div-img img {
+  display: flex;
+   width: 110px;
+   height: 100%;
+}
+
+section .div-img{
+  display: flex;
+  width: 380px;
+  height: 120px;
+  background-color: #f7f2f0d1;
+  border-radius: 10px;
+  margin-top: 35px;
+  margin-bottom: -10px;
+  transition: color .9s ease-in-out, box-shadow .6s ease-in-out;
+  z-index: 10;
+  
+  
 }
 
 
+section .div-img:hover {
+  color: #ff0000;
+  box-shadow: inset 400px 0 0 0 #a0a0a065;;
+}
 
+
+section .div-img  .div-text-produto {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+section .div-img  .div-text-valor {
+  margin-left: 20px;
+  margin-top: 30px;
+  color: rgb(125, 10, 10);
+  font-size: 20px;
+}
+
+.div-search{
+  justify-content: center;
+  margin-right: 38px;
+}
 .header{
-    width: 100;
+    width: 100%;
     overflow: hidden;
     display: flex;
+    z-index: 10;
 
 }
-
 
 
 .favoritos{
@@ -34,32 +80,26 @@ boddy{
     top: 0;
     display: flex;
     margin-top: 15px;
+    z-index: 10;
    
 }
 
 
-.container-slider {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-    align-items: flex-start;
-    justify-content: center;
-    margin-top: 15vh;
-    position: fixed;
-  }
-  
+
   .container-images {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 700px;
+    width: 300px;
+    margin-top: 20px;
+
   }
   
   .slider {
+    display: flex;
+    justify-content: center;
     opacity: 0;
     transition: opacity .2s;
-    position: absolute;
     width: 100%;
     border-radius: 10px;
   }
@@ -106,8 +146,25 @@ boddy{
     grid-template-columns: repeat(5, 1fr);
     background-color: #ecd4d4;
     box-shadow: 0 5px 6px 1px #000000;
+   
 }
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+nav div img{
 
+  width: 100px;
+  height: 70px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.div-search button{
+  margin-top: 40px;
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+}
 a {
     display: grid;
     place-items: center;
@@ -125,9 +182,6 @@ i:hover {
     transform: scale(1.2)rotateY(180deg);
     color: #710002;
 }
-
-
-
 
 
 
