@@ -14,7 +14,9 @@ boddy{
     min-height: 100vh;
     
 }
- 
+
+
+
 .header{
     width: 100;
     overflow: hidden;
@@ -35,10 +37,53 @@ boddy{
    
 }
 
-.i:hover{
-    transform: scale(1.2)rotateY(180deg);
-    color: #710002;
-}
+
+.container-slider {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 15vh;
+    position: fixed;
+  }
+  
+  .container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+  }
+  
+  .slider {
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .on {
+    opacity: 1;
+  }
+  
+  #prev-button, #next-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  #prev-button img, #next-button img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #prev-button {
+    transform: rotate(180deg);
+  }
 
 
 .menu {
@@ -86,55 +131,6 @@ i:hover {
 
 
 
-/*.container-slider {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-    align-items: flex-start;
-    justify-content: center;
-    margin-top: 15vh;
-    position: fixed;
-}
-
-.container-images {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 700px;
-}
-
-.slider {
-    opacity: 0;
-    transition: opacity .2s;
-    position: absolute;
-    width: 100%;
-    border-radius: 10px;
-}
-
-.on {
-    opacity: 1;
-}
-
-#prev-button,
-#next-button {
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-#prev-button img,
-#next-button img {
-    width: 100%;
-    height: 100%;
-}
-
-#prev-button {
-    transform: rotate(180deg);
-}
-*/
 
 
 

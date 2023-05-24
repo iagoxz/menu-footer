@@ -1,6 +1,6 @@
 const slider = document.querySelectorAll('.slider');
 const btnPrev = document.getElementById('prev-button');
-const btnNext = document.getElementById('next-button'); 
+const btnNext = document.getElementById('next-button');
 
 let currentSlide = 0;
 
